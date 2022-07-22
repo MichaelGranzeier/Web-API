@@ -4,18 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donut Maker</title>
+    <title>Web-API</title>
     <link href="css/main.css" rel="stylesheet" />
 </head>
 <body>
     <header>
+        
         <nav>
-            <ul></ul>
+            <a href="#apod">APOD</a>
+            <a href="#ran">Random APOD</a>
+            <a href="#mrp">Curiosity Photos</a>
         </nav>
     </header>
     <main>
+        <!-- APOD -->
+        <h1 id="apod">APOD</h1>
+        <p id="input"> Date: <input type="text" placeholder="YYYY-MM-DD" id="date"><button id="search">Search</button></p>
+        <h1 id="APOD-Title"></h1>
+        <img id="APOD-Image">
+        <h5 id="APOD-Copy"></h5>
+        <p id="APOD-Explanation"></p>
+
+        <!-- ran -->
+        <h1 id="ran">Random APOD</h1>
+        <button id="searchTwo">Search</button>
+        <h1 id="ran-Title"></h1>
+        <h3 id="ran-Date"></h3>
+        <img id="ran-Image">
+        <h5 id="ran-Copy"></h5>
+        <p id="ran-Explanation"></p>
+
+        <!-- mrp -->
+        <h1 id="mrp">Curiosity Photos</h1>
+        <p id="inputTwo"> Date: <input type="text" placeholder="YYYY-M-D" id="edate">
+        <form id="cams">
+            Camera:
+        <input type="radio" id="FHAZ" name="cam" value="FHAZ"><label for="FHAZ">FHAZ</label>
+        <input type="radio" id="RHAZ" name="cam" value="RHAZ"><label for="RHAZ">RHAZ</label>
+        <input type="radio" id="MAST" name="cam" value="MAST"><label for="MAST">MAST</label>
+        <input type="radio" id="CHEMCAM" name="cam" value="CHEMCAM"><label for="CHEMCAM">CHEMCAM</label>
+        <input type="radio" id="MAHLI" name="cam" value="MAHLI"><label for="MAHLI">MAHLI</label>
+        <input type="radio" id="MARDI" name="cam" value="MARDI"><label for="MARDI">MARDI</label>
+        <input type="radio" id="NAVCAM" name="cam" value="NAVCAM"><label for="NAVCAM">NAVCAM</label>
+        </form>
+        <button id="esearch">Search</button></p>
+        <img id="mrp-Image">
     </main>
     <footer>
+        <a class="links" href="https://api.nasa.gov/#signUp">https://api.nasa.gov/#signUp</a><br>
+        <a class="links" href="https://github.com/nasa/apod-api#docs">https://github.com/nasa/apod-api#docs</a>
+        <section id="mode">
+            <button id="nightMode" onclick="nm()">Night Mode</button>
+            <button id="dayMode" onclick="dm()">Day Mode</button>
+        </section>
     </footer>
     <script src="js/main.js"></script>
 </body>
