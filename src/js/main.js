@@ -50,6 +50,15 @@ function getRan(){
 let mrpdate = document.getElementById("esearch");
 mrpdate.addEventListener("click", getMrp);
 let mrpImage = document.getElementById("mrp-Image");
+let mrpImageOne = document.getElementById("mrp-ImageOne");
+let mrpImageTwo = document.getElementById("mrp-ImageTwo");
+let mrpImageThree = document.getElementById("mrp-ImageThree");
+let mrpImageFour = document.getElementById("mrp-ImageFour");
+let mrpImageFive = document.getElementById("mrp-ImageFive");
+let mrpImageSix = document.getElementById("mrp-ImageSix");
+let mrpImageSeven = document.getElementById("mrp-ImageSeven");
+let mrpImageEight = document.getElementById("mrp-ImageEight");
+let mrpImageNine = document.getElementById("mrp-ImageNine");
 
 function getMrp(){
     let edateinput = document.getElementById("edate");
@@ -63,7 +72,15 @@ function getMrp(){
     .then((response) => {
     console.log(response);
     mrpImage.src = response.photos[0].img_src;
-    console.log(mrpImage)
+    mrpImageOne.src = response.photos[1].img_src;
+    mrpImageTwo.src = response.photos[2].img_src;
+    mrpImageThree.src = response.photos[3].img_src;
+    mrpImageFour.src = response.photos[4].img_src;
+    mrpImageFive.src = response.photos[5].img_src;
+    mrpImageSix.src = response.photos[6].img_src;
+    mrpImageSeven.src = response.photos[7].img_src;
+    mrpImageEight.src = response.photos[8].img_src;
+    mrpImageNine.src = response.photos[9].img_src;
     }) 
 } 
 
