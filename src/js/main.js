@@ -59,6 +59,17 @@ let mrpImageSix = document.getElementById("mrp-ImageSix");
 let mrpImageSeven = document.getElementById("mrp-ImageSeven");
 let mrpImageEight = document.getElementById("mrp-ImageEight");
 let mrpImageNine = document.getElementById("mrp-ImageNine");
+let i = 0;
+
+window.addEventListener("keydown", (event) =>{
+    if(event.key == "ArrowRight"){
+        i++;
+    }
+    else if(event.key == "ArrowLeft" && i >= 0){
+        i--;
+    }
+    getMrp();
+})
 
 function getMrp(){
     let edateinput = document.getElementById("edate");
@@ -71,18 +82,12 @@ function getMrp(){
     .then((response) => {return response.json(); })
     .then((response) => {
     console.log(response);
-    mrpImage.src = response.photos[0].img_src;
-    mrpImageOne.src = response.photos[1].img_src;
-    mrpImageTwo.src = response.photos[2].img_src;
-    mrpImageThree.src = response.photos[3].img_src;
-    mrpImageFour.src = response.photos[4].img_src;
-    mrpImageFive.src = response.photos[5].img_src;
-    mrpImageSix.src = response.photos[6].img_src;
-    mrpImageSeven.src = response.photos[7].img_src;
-    mrpImageEight.src = response.photos[8].img_src;
-    mrpImageNine.src = response.photos[9].img_src;
+    mrpImage.src = response.photos[i].img_src;
+    document.getElementById("mrp-Num").innerText = i;
     }) 
-} 
+}
+
+
 
 function nm(){
     document.body.style.backgroundColor = "black"
