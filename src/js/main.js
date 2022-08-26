@@ -50,15 +50,6 @@ function getRan(){
 let mrpdate = document.getElementById("esearch");
 mrpdate.addEventListener("click", getMrp);
 let mrpImage = document.getElementById("mrp-Image");
-let mrpImageOne = document.getElementById("mrp-ImageOne");
-let mrpImageTwo = document.getElementById("mrp-ImageTwo");
-let mrpImageThree = document.getElementById("mrp-ImageThree");
-let mrpImageFour = document.getElementById("mrp-ImageFour");
-let mrpImageFive = document.getElementById("mrp-ImageFive");
-let mrpImageSix = document.getElementById("mrp-ImageSix");
-let mrpImageSeven = document.getElementById("mrp-ImageSeven");
-let mrpImageEight = document.getElementById("mrp-ImageEight");
-let mrpImageNine = document.getElementById("mrp-ImageNine");
 let i = 0;
 
 window.addEventListener("keydown", (event) =>{
